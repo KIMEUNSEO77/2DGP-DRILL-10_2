@@ -13,14 +13,14 @@ ACTION_PER_TIME = 1.0 / TIME_PER_ACTION
 FRAMES_PER_ACTION = 14
 
 class Bird:
-    def __init__(self, x=400, y=300):
+    def __init__(self, x=400, y=300, frame_idx=0):
         self.image = load_image('bird_animation.png')
         self.x, self.y = x, y
         # self.frame = 0
         self.dir = 1   # 1: right, -1: left
         self.frame_x = [35, 215, 385, 580, 35, 215, 385, 580, 760, 35, 215, 385, 580, 760]
         self.frame_y = [0, 0, 0, 0, 170, 170, 170, 170, 170, 350, 350, 350, 350, 350]
-        self.frame_idx = 0
+        self.frame_idx = frame_idx
         self.frame = 0.0
 
     def update(self):

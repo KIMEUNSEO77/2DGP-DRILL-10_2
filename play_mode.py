@@ -38,9 +38,23 @@ def init():
     game_world.add_object(boy, 1)
 
     x, y = 100, 400
-    for i in range(10):
-        bird = Bird(x + i * 150, y)
+    for i in range(4):
+        f_idx = random.randint(0, 13)
+        bird = Bird(x, y, f_idx)
         game_world.add_object(bird, 1)
+        x += 100
+    x = 100
+    for i in range(3):
+        f_idx = random.randint(0, 13)
+        bird = Bird(x, y - 100, f_idx)
+        game_world.add_object(bird, 1)
+        x += 100
+    x = 100
+    for i in range(3):
+        f_idx = random.randint(0, 13)
+        bird = Bird(x, y - 200, f_idx)
+        game_world.add_object(bird, 1)
+        x += 100
 
 
 
