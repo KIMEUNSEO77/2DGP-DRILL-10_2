@@ -21,7 +21,7 @@ class Bird:
         self.frame_x = [35, 215, 385, 580, 35, 215, 385, 580, 760, 35, 215, 385, 580, 760]
         self.frame_y = [0, 0, 0, 0, 170, 170, 170, 170, 170, 350, 350, 350, 350, 350]
         self.frame_idx = frame_idx
-        self.frame = 0.0
+        self.frame = (int) (frame_idx)
 
     def update(self):
         # self.frame_idx = (self.frame_idx + 1) % 14
