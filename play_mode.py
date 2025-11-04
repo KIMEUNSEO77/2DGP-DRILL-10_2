@@ -1,3 +1,5 @@
+import random
+
 from pico2d import *
 
 from boy import Boy
