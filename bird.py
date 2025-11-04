@@ -18,8 +18,8 @@ class Bird:
         self.x, self.y = x, y
         # self.frame = 0
         self.dir = 1   # 1: right, -1: left
-        self.frame_x = [40, 220, 390, 560, 40, 220, 390, 580, 760, 40, 220, 390, 580, 760]
-        self.frame_y = [0, 0, 0, 0, 170, 170, 170, 170, 170, 340, 340, 340, 340, 340]
+        self.frame_x = [35, 215, 385, 580, 35, 215, 385, 580, 760, 35, 215, 385, 580, 760]
+        self.frame_y = [0, 0, 0, 0, 170, 170, 170, 170, 170, 350, 350, 350, 350, 350]
         self.frame_idx = 0
 
     def update(self):
@@ -32,9 +32,9 @@ class Bird:
 
     def draw(self):
         if self.dir == 1:
-            self.image.clip_draw(self.frame_x[self.frame_idx], self.frame_y[self.frame_idx], 140, 120, self.x, self.y)
+            self.image.clip_composite_draw(self.frame_x[self.frame_idx], self.frame_y[self.frame_idx], 140, 160, 0, '', self.x, self.y, 100, 100)
         else:
-            self.image.clip_composite_draw(self.frame_x[self.frame_idx], self.frame_y[self.frame_idx], 140, 120, 0, 'h', self.x, self.y, 100, 100)
+            self.image.clip_composite_draw(self.frame_x[self.frame_idx], self.frame_y[self.frame_idx], 140, 160, 0, 'h', self.x, self.y, 100, 100)
 
     def handle_events(self):
         pass
